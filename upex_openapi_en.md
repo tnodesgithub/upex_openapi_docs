@@ -661,22 +661,29 @@ Param|Example|Description
 --|--|--
 code|0|code>0 Fail
 msg|"suc"|
-data|json|`{“order_info”:{},"trade_list":[]}`
+data|json|`{“order_info”:{},"trade_list":[]}`<br/><br/>order status:<br/>INIT(0,"initial order")<br/>NEW_(1,"new order")<br/>FILLED(2,"Filled")<br/>PART_FILLED(3,"partial-filled")<br/>CANCELED(4,"canceled")<br/>PENDING_CANCEL(5,"wait-canceling")<br/>EXPIRED(6,"invalid")
 
 Response Example:
 ```
 {
   "order_info": {
-    "id": 343,
-    "side": "sell",
-    "side_msg": "卖出",
-    "created_at": "09-22 12:22",
-    "price": 222.33,
-    "volume": 222.33,
-    "deal_volume": 222.33,
-    "total_price": 222.33,
-    "fee": 222.33,
-    "avg_price": 222.33
+    "id":184880,
+    "side":"BUY",
+    "total_price":"340.00000000",
+    "created_at":1544608016995,
+    "avg_price":"0.00000000",
+    "countCoin":"USDT",
+    "source":3,"type":1,
+    "side_msg":"买入",
+    "volume":"0.10000000",
+    "price":"3400.00000000",
+    "source_msg":"API",
+    "status_msg":"已撤单",
+    "deal_volume":"0.00000000",
+    "remain_volume":"0.10000000",
+    "baseCoin":"BTC",
+    "tradeList":[],
+    "status":4
   },
   "trade_list": [
     {
